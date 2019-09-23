@@ -4,3 +4,11 @@ type ExampleEntity @entity {
   _burner: Bytes! # address
   _value: BigInt! # uint256
 }
+
+
+type SecondEntity @entity {
+  id: ID!
+  count: BigInt!
+  _burner: Bytes! # address
+  _value: BigInt! # uint256
+}

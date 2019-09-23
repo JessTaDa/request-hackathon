@@ -5,6 +5,7 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ jesstada/request-hackathon",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ jesstada/request-hackathon --access-token $ACCESS_TOKEN",
     "create-local": "graph create --node http://localhost:8020/ jesstada/request-hackathon",
     "remove-local": "graph remove --node http://localhost:8020/ jesstada/request-hackathon",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 jesstada/request-hackathon"
@@ -12,5 +13,8 @@
   "dependencies": {
     "@graphprotocol/graph-cli": "0.15.0",
     "@graphprotocol/graph-ts": "0.15.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
   }
 }

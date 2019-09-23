@@ -1,6 +1,26 @@
-type ExampleEntity @entity {
+type Burn @entity {
   id: ID!
   count: BigInt!
   _burner: Bytes! # address
   _value: BigInt! # uint256
+}
+
+type OwnershipTransferred @entity {
+  id: ID!
+  currentOwner: Bytes!
+  newOwner: Bytes!
+}
+
+type Approval @entity {
+  id: ID!
+  count: BigInt!
+  _burner: Bytes! # address
+  _value: BigInt! # uint256
+}
+
+type Transfer @entity {
+  id: ID!
+  payer: Bytes!
+  payee: Bytes!
+  status: String!
 }
